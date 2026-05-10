@@ -23,9 +23,13 @@ Turn scattered applicant information into decision-ready guidance for profile ev
 
 ### Codex
 
+macOS / Linux
+
 ```bash
 git clone git@github.com:Maropion03/gradpilot.git ~/.codex/skills/gradpilot
 ```
+
+Windows PowerShell
 
 ```powershell
 git clone git@github.com:Maropion03/gradpilot.git $HOME\.codex\skills\gradpilot
@@ -33,9 +37,13 @@ git clone git@github.com:Maropion03/gradpilot.git $HOME\.codex\skills\gradpilot
 
 ### Claude Code
 
+macOS / Linux
+
 ```bash
 git clone git@github.com:Maropion03/gradpilot.git ~/.claude/skills/gradpilot
 ```
+
+Windows PowerShell
 
 ```powershell
 git clone git@github.com:Maropion03/gradpilot.git $HOME\.claude\skills\gradpilot
