@@ -1,8 +1,21 @@
+<div align="center">
+
 # Gradpilot
 
-Gradpilot is a reusable skill for graduate application strategy. It helps an agent or CLI turn scattered applicant information into a decision-ready recommendation for profile evaluation, school selection, SOP positioning, resume framing, and timeline planning.
+### A reusable graduate application strategy skill for agents and CLIs
 
-The package is written to be host-agnostic first, with optional metadata for platforms that support richer skill registration.
+Turn scattered applicant information into decision-ready guidance for profile evaluation, school selection, SOP positioning, resume framing, and application planning.
+
+> Built for realistic application strategy, not vague encouragement.
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Skill Type](https://img.shields.io/badge/Type-Strategy%20Skill-7c3aed)
+![Use Case](https://img.shields.io/badge/Use%20Case-Graduate%20Applications-2563eb)
+![Host](https://img.shields.io/badge/Host-Agent%20%7C%20CLI-0f766e)
+
+[Install](#quick-install) · [Features](#what-gradpilot-helps-with) · [Use Cases](#when-to-use) · [Compatibility](#host-compatibility) · [Examples](#quick-usage-examples)
+
+</div>
 
 ## Quick Install
 
@@ -30,14 +43,6 @@ mkdir -p references
 curl -o references/evaluation-rubric.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/evaluation-rubric.md
 curl -o references/output-templates.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/output-templates.md
 ```
-
-### Option 3: Codex-style local skill folder
-
-```bash
-git clone https://github.com/Maropion03/gradpilot.git "$HOME/.codex/skills/gradpilot"
-```
-
-Then invoke it in prompts with `Gradpilot` or `$gradpilot`, depending on how your host exposes local skills.
 
 ## What Gradpilot Helps With
 
