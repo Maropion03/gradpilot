@@ -27,10 +27,18 @@ Turn scattered applicant information into decision-ready guidance for profile ev
 git clone git@github.com:Maropion03/gradpilot.git ~/.codex/skills/gradpilot
 ```
 
+```powershell
+git clone git@github.com:Maropion03/gradpilot.git $HOME\.codex\skills\gradpilot
+```
+
 ### Claude Code
 
 ```bash
 git clone git@github.com:Maropion03/gradpilot.git ~/.claude/skills/gradpilot
+```
+
+```powershell
+git clone git@github.com:Maropion03/gradpilot.git $HOME\.claude\skills\gradpilot
 ```
 
 Use `SKILL.md` as the main instruction file. Load `references/` only when you need the rubric or output templates.
@@ -46,12 +54,12 @@ git clone git@github.com:Maropion03/gradpilot.git <TARGET>
 
 Suggested targets:
 
-| Host | Target path |
-|---|---|
-| Codex | `~/.codex/skills/gradpilot` |
-| Claude Code | `~/.claude/skills/gradpilot` |
-| Generic custom host | your host's local skills or prompts directory |
-| Standalone prompt bundle | any reusable prompt directory |
+| Host | macOS / Linux | Windows PowerShell |
+|---|---|---|
+| Codex | `~/.codex/skills/gradpilot` | `$HOME\.codex\skills\gradpilot` |
+| Claude Code | `~/.claude/skills/gradpilot` | `$HOME\.claude\skills\gradpilot` |
+| Generic custom host | your host's local skills or prompts directory | your host's local skills or prompts directory |
+| Standalone prompt bundle | any reusable prompt directory | any reusable prompt directory |
 
 Download only the core file instead of cloning:
 
@@ -167,8 +175,12 @@ Use:
 
 In practice:
 
-- `Codex` can be installed at `~/.codex/skills/gradpilot`
-- `Claude Code` can be installed at `~/.claude/skills/gradpilot`
+- `Codex`
+  - macOS / Linux: `~/.codex/skills/gradpilot`
+  - Windows PowerShell: `$HOME\.codex\skills\gradpilot`
+- `Claude Code`
+  - macOS / Linux: `~/.claude/skills/gradpilot`
+  - Windows PowerShell: `$HOME\.claude\skills\gradpilot`
 
 ### Other agent frameworks
 
