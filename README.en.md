@@ -288,3 +288,8 @@ Gradpilot is intentionally conservative:
 - facts and inference should be clearly separated
 
 If you adapt this skill for a specific market or institution type, keep the same decision discipline and only localize the program logic, examples, and terminology.
+
+## About the Author
+
+- Xiaohongshu: [Maropion](https://www.xiaohongshu.com/user/profile/606dcdeb000000000101e8a3?tab=fav&subTab=note)
+- GitHub: [Maropion03/gradpilot](https://github.com/Maropion03/gradpilot)

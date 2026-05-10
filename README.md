@@ -300,3 +300,8 @@ Gradpilot 默认是偏克制、偏保守的：
 - 必须区分事实与推断
 
 如果你要把它改造成某个市场、某类项目或某个机构场景专用的版本，建议保留这套判断框架，只本地化项目逻辑、示例和术语。
+
+## 关于作者
+
+- 小红书：[Maropion](https://www.xiaohongshu.com/user/profile/606dcdeb000000000101e8a3?tab=fav&subTab=note)
+- GitHub：[Maropion03/gradpilot](https://github.com/Maropion03/gradpilot)
