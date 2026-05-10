@@ -23,30 +23,50 @@
 
 ## 快速安装
 
-### 方案 1：克隆整个仓库
+### Codex
 
 ```bash
-git clone https://github.com/Maropion03/gradpilot.git
-cd gradpilot
+git clone git@github.com:Maropion03/gradpilot.git ~/.codex/skills/gradpilot
+```
+
+### Claude Code
+
+```bash
+git clone git@github.com:Maropion03/gradpilot.git ~/.claude/skills/gradpilot
 ```
 
 默认把 `SKILL.md` 当作主指令文件使用；只有在需要评分框架或输出模板时，再加载 `references/`。
 
-### 方案 2：只下载核心文件
+<details>
+<summary>其他 host 安装路径</summary>
+
+克隆到自定义目标目录：
+
+```bash
+git clone git@github.com:Maropion03/gradpilot.git <TARGET>
+```
+
+建议目标路径：
+
+| Host | `<TARGET>` 路径 |
+|---|---|
+| Codex | `~/.codex/skills/gradpilot` |
+| Claude Code | `~/.claude/skills/gradpilot` |
+| 通用自定义 host | 你的 host 本地 skills / prompts 目录 |
+| 独立 prompt bundle | 任意可复用 prompt 目录 |
+
+如果你不想克隆整个仓库，也可以只下载核心文件：
 
 ```bash
 mkdir -p gradpilot
 cd gradpilot
 curl -O https://raw.githubusercontent.com/Maropion03/gradpilot/main/SKILL.md
-```
-
-可选参考文件：
-
-```bash
 mkdir -p references
 curl -o references/evaluation-rubric.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/evaluation-rubric.md
 curl -o references/output-templates.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/output-templates.md
 ```
+
+</details>
 
 <a id="why-gradpilot-zh"></a>
 

@@ -21,30 +21,50 @@ Turn scattered applicant information into decision-ready guidance for profile ev
 
 ## Quick Install
 
-### Option 1: Clone the repository
+### Codex
 
 ```bash
-git clone https://github.com/Maropion03/gradpilot.git
-cd gradpilot
+git clone git@github.com:Maropion03/gradpilot.git ~/.codex/skills/gradpilot
 ```
 
-Use `SKILL.md` as the main instruction file and load `references/` only when you need the rubric or output templates.
+### Claude Code
 
-### Option 2: Download only the core files
+```bash
+git clone git@github.com:Maropion03/gradpilot.git ~/.claude/skills/gradpilot
+```
+
+Use `SKILL.md` as the main instruction file. Load `references/` only when you need the rubric or output templates.
+
+<details>
+<summary>Other host install paths</summary>
+
+Clone into a custom target:
+
+```bash
+git clone git@github.com:Maropion03/gradpilot.git <TARGET>
+```
+
+Suggested targets:
+
+| Host | Target path |
+|---|---|
+| Codex | `~/.codex/skills/gradpilot` |
+| Claude Code | `~/.claude/skills/gradpilot` |
+| Generic custom host | your host's local skills or prompts directory |
+| Standalone prompt bundle | any reusable prompt directory |
+
+Download only the core file instead of cloning:
 
 ```bash
 mkdir -p gradpilot
 cd gradpilot
 curl -O https://raw.githubusercontent.com/Maropion03/gradpilot/main/SKILL.md
-```
-
-Optional reference files:
-
-```bash
 mkdir -p references
 curl -o references/evaluation-rubric.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/evaluation-rubric.md
 curl -o references/output-templates.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/output-templates.md
 ```
+
+</details>
 
 ## Why Gradpilot
 
