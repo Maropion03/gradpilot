@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gradpilot"
+  short_description: "Graduate application strategy skill for profile evaluation, school selection, SOP positioning, and planning"
+  default_prompt: "Use Gradpilot to evaluate my background and help me with graduate application strategy, including school selection, profile positioning, SOP direction, and timeline planning."
