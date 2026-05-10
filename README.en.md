@@ -291,5 +291,5 @@ If you adapt this skill for a specific market or institution type, keep the same
 
 ## About the Author
 
-- Xiaohongshu: [Maropion](https://www.xiaohongshu.com/user/profile/606dcdeb000000000101e8a3?tab=fav&subTab=note)
+- Xiaohongshu: [薄藤色产品实验室](https://www.xiaohongshu.com/user/profile/606dcdeb000000000101e8a3?tab=fav&subTab=note)
 - GitHub: [Maropion03/gradpilot](https://github.com/Maropion03/gradpilot)
