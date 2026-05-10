@@ -4,6 +4,41 @@ Gradpilot is a reusable skill for graduate application strategy. It helps an age
 
 The package is written to be host-agnostic first, with optional metadata for platforms that support richer skill registration.
 
+## Quick Install
+
+### Option 1: Clone the repository
+
+```bash
+git clone https://github.com/Maropion03/gradpilot.git
+cd gradpilot
+```
+
+Use `SKILL.md` as the main instruction file and load `references/` only when you need the rubric or output templates.
+
+### Option 2: Download only the core files
+
+```bash
+mkdir -p gradpilot
+cd gradpilot
+curl -O https://raw.githubusercontent.com/Maropion03/gradpilot/main/SKILL.md
+```
+
+Optional reference files:
+
+```bash
+mkdir -p references
+curl -o references/evaluation-rubric.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/evaluation-rubric.md
+curl -o references/output-templates.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/output-templates.md
+```
+
+### Option 3: Codex-style local skill folder
+
+```bash
+git clone https://github.com/Maropion03/gradpilot.git "$HOME/.codex/skills/gradpilot"
+```
+
+Then invoke it in prompts with `Gradpilot` or `$gradpilot`, depending on how your host exposes local skills.
+
 ## What Gradpilot Helps With
 
 - Profile diagnosis for master's or PhD applications
