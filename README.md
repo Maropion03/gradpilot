@@ -304,4 +304,4 @@ Gradpilot 默认是偏克制、偏保守的：
 ## 关于作者
 
 - 小红书：[薄藤色产品实验室](https://www.xiaohongshu.com/user/profile/606dcdeb000000000101e8a3?tab=fav&subTab=note)
-- GitHub：[Maropion03/gradpilot](https://github.com/Maropion03/gradpilot)
+- GitHub：https://github.com/Maropion03/gradpilot
