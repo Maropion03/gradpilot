@@ -13,7 +13,9 @@ Turn scattered applicant information into decision-ready guidance for profile ev
 ![Use Case](https://img.shields.io/badge/Use%20Case-Graduate%20Applications-2563eb)
 ![Host](https://img.shields.io/badge/Host-Agent%20%7C%20CLI-0f766e)
 
-[Install](#quick-install) · [Features](#what-gradpilot-helps-with) · [Use Cases](#when-to-use) · [Compatibility](#host-compatibility) · [Examples](#quick-usage-examples)
+[English](./README.md) · [中文](./README.zh.md)
+
+[Install](#quick-install) · [Why](#why-gradpilot) · [Features](#what-gradpilot-helps-with) · [Use Cases](#when-to-use) · [Compatibility](#host-compatibility) · [Examples](#quick-usage-examples)
 
 </div>
 
@@ -43,6 +45,18 @@ mkdir -p references
 curl -o references/evaluation-rubric.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/evaluation-rubric.md
 curl -o references/output-templates.md https://raw.githubusercontent.com/Maropion03/gradpilot/main/references/output-templates.md
 ```
+
+## Why Gradpilot
+
+Most graduate-application advice is either too generic to act on or too optimistic to trust. Gradpilot is built to be more useful in the actual decision loop:
+
+- It separates facts from inference instead of hiding weak assumptions.
+- It treats school selection as a portfolio decision, not a dream-list exercise.
+- It focuses on narrative credibility, not just surface-level resume polishing.
+- It gives directional probability bands for planning, without pretending to predict admissions.
+- It tells the user what to fix next, not just what sounds nice.
+
+The goal is straightforward: help an agent or CLI produce realistic, decision-ready guidance for applicants who need clarity more than encouragement.
 
 ## What Gradpilot Helps With
 
