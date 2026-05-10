@@ -157,13 +157,18 @@ Treat `SKILL.md` as the source of truth. A host only needs to:
 
 If your environment supports custom slash commands, prompt libraries, or named skills, register Gradpilot as a reusable strategy skill for graduate-application tasks.
 
-### Codex-style hosts
+### Codex / Claude Code style local skill hosts
 
 Use:
 
 - `SKILL.md` for the behavior contract
 - `agents/openai.yaml` for display metadata
 - `references/` for optional structured guidance
+
+In practice:
+
+- `Codex` can be installed at `~/.codex/skills/gradpilot`
+- `Claude Code` can be installed at `~/.claude/skills/gradpilot`
 
 ### Other agent frameworks
 
