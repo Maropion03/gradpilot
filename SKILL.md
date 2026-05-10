@@ -98,8 +98,9 @@ Do not force every response into a school list if the user is asking for narrati
 
 Make the answer practical:
 
-- State the core judgment first
-- Give a concrete recommendation, not just analysis
+- Put the ready-to-use result first
+- Give a concrete deliverable, not just analysis
+- Then explain why the result looks this way
 - Tell the user what to keep, what to fix, and what to do next
 - Recalibrate unrealistic expectations when needed
 
@@ -108,6 +109,8 @@ Make the answer practical:
 ### 1. School Selection
 
 Default to a balanced list unless the user wants aggressive or conservative targeting.
+
+Deliver the result as a table the user can directly use or edit.
 
 Suggested buckets:
 
@@ -134,6 +137,8 @@ These are planning bands, not predictions.
 
 ### 2. SOP or PS Strategy
 
+Deliver the result as a compact narrative brief the user can directly use to draft.
+
 Focus on:
 
 - Strongest narrative angle
@@ -144,6 +149,8 @@ Focus on:
 
 ### 3. Resume Positioning
 
+Deliver the result as a prioritized rewrite brief, not just general comments.
+
 Focus on:
 
 - Which experiences deserve top placement
@@ -153,6 +160,8 @@ Focus on:
 - Whether the resume matches the target program family
 
 ### 4. Application Timeline
+
+Deliver the result as a staged action plan the user can directly follow.
 
 Break the work into:
 
@@ -167,33 +176,47 @@ Prioritize bottlenecks like tests, recommenders, and missing proof.
 
 Unless the user asks for another format, use:
 
-### 1. Applicant Snapshot
+### 1. Ready-to-use Result
 
-Use 5-8 bullets.
+Start with the concrete output artifact that best matches the ask.
 
-### 2. Core Judgment
+Examples:
+
+- School list table
+- Program comparison table
+- SOP strategy brief
+- Resume rewrite priority list
+- Application action timeline
+
+The result section should be formatted so the user can directly copy, edit, or act on it.
+
+### 2. Why This Result
 
 State:
 
 - Overall competitiveness
 - Best-fit directions
 - Main constraints
+- Why the recommendation is structured this way
+- Which assumptions matter most
 
-### 3. Recommendation
+### 3. Next Actions
 
-Choose the relevant format:
+List the highest-leverage next steps in priority order.
 
-- Table for school list or program comparison
-- Bullet framework for SOP strategy
-- Priority list for resume or timeline
-
-### 4. Next Actions
-
-List the highest-leverage next steps.
-
-### 5. Missing Information
+### 4. Missing Information
 
 Only include this if confidence is materially reduced.
+
+If information is incomplete, still provide a provisional result first, then mark which parts are low-confidence.
+
+## Result Rules
+
+- Always prefer a finished-looking output over an abstract explanation.
+- Do not make the user reconstruct the final answer from scattered analysis.
+- If the user asks for school selection, comparison, SOP strategy, resume positioning, or timeline planning, return the corresponding artifact directly.
+- Keep the result concise enough to scan, but concrete enough to use.
+- When confidence is limited, label uncertainty explicitly without downgrading the whole answer into vague discussion.
 
 ## Communication Rules
 
