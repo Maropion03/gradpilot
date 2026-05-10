@@ -2,24 +2,26 @@
 
 # Gradpilot
 
-### A reusable graduate application strategy skill for agents and CLIs
+### 面向 agents 与 CLI 的可复用留学申请策略 skill
 
-Turn scattered applicant information into decision-ready guidance for profile evaluation, school selection, SOP positioning, resume framing, and application planning.
+把分散的申请者信息整理成可直接决策的建议，用于背景评估、选校分层、SOP 定位、简历包装与申请节奏规划。
 
-> Built for realistic application strategy, not vague encouragement.
+> 为真实申请决策而写，不提供空泛鼓励。
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Skill Type](https://img.shields.io/badge/Type-Strategy%20Skill-7c3aed)
 ![Use Case](https://img.shields.io/badge/Use%20Case-Graduate%20Applications-2563eb)
 ![Host](https://img.shields.io/badge/Host-Agent%20%7C%20CLI-0f766e)
 
-[English](./README.md) · [中文](./README.zh.md)
+[中文](./README.md) · [English](./README.en.md)
 
-[Install](#quick-install) · [Why](#why-gradpilot) · [Features](#what-gradpilot-helps-with) · [Use Cases](#when-to-use) · [Compatibility](#host-compatibility) · [Examples](#quick-usage-examples)
+[安装](#quick-install-zh) · [为什么选择](#why-gradpilot-zh) · [能力范围](#features-zh) · [适用场景](#use-cases-zh) · [兼容性](#compatibility-zh) · [示例](#examples-zh)
 
 </div>
 
-## Quick Install
+<a id="quick-install-zh"></a>
+
+## 快速安装
 
 ### Codex
 
@@ -33,27 +35,27 @@ git clone git@github.com:Maropion03/gradpilot.git ~/.codex/skills/gradpilot
 git clone git@github.com:Maropion03/gradpilot.git ~/.claude/skills/gradpilot
 ```
 
-Use `SKILL.md` as the main instruction file. Load `references/` only when you need the rubric or output templates.
+默认把 `SKILL.md` 当作主指令文件使用；只有在需要评分框架或输出模板时，再加载 `references/`。
 
 <details>
-<summary>Other host install paths</summary>
+<summary>其他 host 安装路径</summary>
 
-Clone into a custom target:
+克隆到自定义目标目录：
 
 ```bash
 git clone git@github.com:Maropion03/gradpilot.git <TARGET>
 ```
 
-Suggested targets:
+建议目标路径：
 
-| Host | Target path |
+| Host | `<TARGET>` 路径 |
 |---|---|
 | Codex | `~/.codex/skills/gradpilot` |
 | Claude Code | `~/.claude/skills/gradpilot` |
-| Generic custom host | your host's local skills or prompts directory |
-| Standalone prompt bundle | any reusable prompt directory |
+| 通用自定义 host | 你的 host 本地 skills / prompts 目录 |
+| 独立 prompt bundle | 任意可复用 prompt 目录 |
 
-Download only the core file instead of cloning:
+如果你不想克隆整个仓库，也可以只下载核心文件：
 
 ```bash
 mkdir -p gradpilot
@@ -66,153 +68,210 @@ curl -o references/output-templates.md https://raw.githubusercontent.com/Maropio
 
 </details>
 
-## Why Gradpilot
+<a id="why-gradpilot-zh"></a>
 
-Most graduate-application advice is either too generic to act on or too optimistic to trust. Gradpilot is built to be more useful in the actual decision loop:
+## 为什么选择 Gradpilot
 
-- It separates facts from inference instead of hiding weak assumptions.
-- It treats school selection as a portfolio decision, not a dream-list exercise.
-- It focuses on narrative credibility, not just surface-level resume polishing.
-- It gives directional probability bands for planning, without pretending to predict admissions.
-- It tells the user what to fix next, not just what sounds nice.
+大多数留学申请建议的问题，不是信息少，而是太泛、太虚，或者乐观得不值得信。Gradpilot 的目标是把建议变成真正能拿来判断下一步的东西：
 
-The goal is straightforward: help an agent or CLI produce realistic, decision-ready guidance for applicants who need clarity more than encouragement.
+- 它会区分事实和推断，不会把脆弱假设包装成结论。
+- 它把选校看成 portfolio decision，而不是只列一个“梦校清单”。
+- 它关注叙事是否可信，而不只是把简历字面润色得更好看。
+- 它会给出用于规划的概率分层，但不会假装自己能预测录取。
+- 它会明确告诉用户下一步该补什么，而不只是给好听的话。
 
-## What Gradpilot Helps With
+目标很直接：让 agent 或 CLI 在处理留学申请问题时，输出更现实、更可执行、更适合决策的建议。
 
-- Profile diagnosis for master's or PhD applications
-- Reach / target / safety school selection
-- Program and country comparison
-- SOP / PS narrative strategy
-- Resume positioning for application fit
-- Application timeline and priority planning
+<a id="features-zh"></a>
 
-## When To Use
+## Gradpilot 能做什么
 
-Use Gradpilot when the user wants judgment, prioritization, or strategy for graduate applications.
+- 评估硕士或博士申请背景
+- 构建冲刺 / 主申 / 保底选校列表
+- 比较项目与国家路径
+- 设计 SOP / PS 叙事方向
+- 调整简历内容与项目适配度
+- 规划申请时间线与优先级
 
-Typical prompts:
+<a id="use-cases-zh"></a>
 
-- "Evaluate my background for MS in Business Analytics."
-- "Help me build a US / UK school list."
-- "Compare these programs and tell me which fit is real."
-- "Help me position my resume and SOP story."
-- "What should I fix first before this intake?"
+## 何时使用
 
-## When Not To Use
+当用户需要留学申请相关的判断、优先级建议或策略规划时，就适合使用 Gradpilot。
 
-Gradpilot is not the primary workflow for:
+典型请求：
 
-- Visa filing or immigration forms
-- DS-160 style operational paperwork
-- Scholarship portal form filling
-- Line-by-line essay polishing
-- General career coaching unrelated to graduate applications
+- “帮我评估一下我申请 MSBA 的背景。”
+- “帮我做一个美国 / 英国选校名单。”
+- “比较一下这几个项目，告诉我哪个 fit 更真实。”
+- “帮我定位 SOP 主线和简历叙事。”
+- “这个申请季我最先该补什么？”
 
-## What Inputs Work Best
+## 不适用场景
 
-Minimum useful inputs:
+Gradpilot 不是以下问题的主工作流：
 
-- Resume, CV, or a short background summary
-- Intended degree and target field
+- 签证或移民材料填写
+- DS-160 一类操作型表单
+- 奖学金系统逐项填报
+- 文书逐句润色
+- 与留学申请无关的泛职业咨询
 
-Strongly preferred inputs:
+## 最佳输入信息
 
-- Current school, major, GPA scale, and rank percentile
-- Language scores and standardized tests
-- Internships, research, projects, publications, awards
-- Target countries, intake year, and budget sensitivity
-- Career goal after graduation
+最少建议提供：
 
-If critical inputs are missing, Gradpilot should still respond, but label the result as a rough planning estimate.
+- 简历、CV 或一段背景摘要
+- 目标学位与目标方向
 
-## Output Modes
+强烈建议补充：
 
-Gradpilot does not force one format for every query. It should choose the output track that matches the user's ask:
+- 当前学校、专业、GPA 制度与排名百分位
+- 语言成绩与标准化考试成绩
+- 实习、科研、项目、论文、奖项
+- 目标国家、申请年份与预算敏感度
+- 毕业后的职业目标
 
-- School selection
-- Program comparison
-- SOP / PS strategy
-- Resume positioning
-- Application timeline
-- Mixed strategy review
+如果关键信息缺失，Gradpilot 仍然可以先给建议，但应该明确标注为 rough planning estimate。
 
-The default answer shape is:
+## 输出模式
+
+Gradpilot 不会把所有问题都硬套成同一种格式，而是会根据用户真实需求选择输出轨道：
+
+- 选校建议
+- 项目比较
+- SOP / PS 策略
+- 简历定位
+- 申请时间线
+- 混合策略 review
+
+默认输出结构：
 
 1. Applicant snapshot
 2. Core judgment
 3. Recommendation
 4. Next actions
-5. Missing information, only when confidence is materially reduced
+5. Missing information（仅在信息不足明显影响判断时保留）
 
-## Host Compatibility
+<a id="compatibility-zh"></a>
 
-### Generic agent or CLI
+## 宿主兼容性
 
-Treat `SKILL.md` as the source of truth. A host only needs to:
+### 通用 agent 或 CLI
 
-1. Load the skill instructions
-2. Inject them into the agent context
-3. Optionally expose the reference files when deeper structure is needed
+把 `SKILL.md` 当作行为主文件即可。宿主至少需要能做到：
 
-If your environment supports custom slash commands, prompt libraries, or named skills, register Gradpilot as a reusable strategy skill for graduate-application tasks.
+1. 加载 skill 指令
+2. 把指令注入到 agent 上下文
+3. 在需要更强结构化判断时，额外暴露参考文件
 
-### Codex-style hosts
+如果你的环境支持 slash commands、prompt library 或 named skills，可以把 Gradpilot 注册成一个专门处理留学申请策略的 skill。
 
-Use:
+### Codex 风格宿主
 
-- `SKILL.md` for the behavior contract
-- `agents/openai.yaml` for display metadata
-- `references/` for optional structured guidance
+建议使用：
 
-### Other agent frameworks
+- `SKILL.md` 作为行为契约
+- `agents/openai.yaml` 作为展示元信息
+- `references/` 作为可选参考材料
 
-If the host does not support a native skill system, the same package still works as:
+### 其他 agent 框架
 
-- a reusable system prompt
-- a prompt template bundle
-- a task-specific instruction preset
+如果宿主没有原生 skill 机制，这个仓库也可以当作：
 
-The main requirement is preserving the workflow and communication rules from `SKILL.md`.
+- 可复用 system prompt
+- prompt template bundle
+- 针对留学申请任务的 instruction preset
 
-## Repository Structure
+关键不是宿主名字，而是尽量保留 `SKILL.md` 里的 workflow 和 communication rules。
 
-- `SKILL.md` - core instructions and workflow
-- `references/evaluation-rubric.md` - structured evaluation lenses
-- `references/output-templates.md` - compact answer shapes
-- `agents/openai.yaml` - optional UI metadata for hosts that support it
+## 仓库结构
 
-## Quick Usage Examples
+- `SKILL.md` - 核心说明与工作流
+- `references/evaluation-rubric.md` - 结构化评估维度
+- `references/output-templates.md` - 紧凑输出模板
+- `agents/openai.yaml` - 支持该能力的宿主可选展示元数据
 
-### Example 1: School selection
+<a id="examples-zh"></a>
 
-```text
-Use Gradpilot to evaluate my profile for 2027 MSBA applications in the US.
-My background: [resume or summary]
-Target: balanced school list with reach / target / safety buckets.
-```
+## 快速使用示例
 
-### Example 2: SOP positioning
+### 卡片 1：先做选校分层
+
+适合用户已经有基本背景，想快速拿到冲刺 / 主申 / 保底结构。
 
 ```text
-Use Gradpilot to help me shape my SOP strategy for HCI master's programs.
-Focus on the strongest narrative angle, weak points to reframe, and what evidence to emphasize.
+Use Gradpilot to evaluate my background for 2027 master's applications in [country].
+
+My profile:
+- School / major:
+- GPA / rank:
+- Tests:
+- Internships / research / projects:
+
+Target:
+- Field:
+- Countries:
+- Preference: balanced list
+
+Please return:
+1. applicant snapshot
+2. reach / target / safety school list
+3. top risks
+4. next fixes
 ```
 
-### Example 3: Country comparison
+### 卡片 2：先定 SOP 主线
+
+适合背景不差，但叙事方向还不稳定，想先找最可信的故事线。
 
 ```text
-Use Gradpilot to compare UK, Hong Kong, and Singapore taught master's options for my profile.
-Judge by fit, admission difficulty, ROI, and post-study path.
+Use Gradpilot to help me shape my SOP strategy for [program family].
+
+My background:
+- Current major:
+- Key experiences:
+- Why I want to switch / continue:
+- Career goal:
+
+Please focus on:
+1. strongest narrative angle
+2. weak points that need reframing
+3. evidence to emphasize
+4. programs this story supports best
 ```
 
-## Customization Notes
+### 卡片 3：先比较国家或项目路径
 
-Gradpilot is intentionally conservative:
+适合已经缩小到几个方向，想判断哪个选择更匹配自己。
 
-- default language is Chinese unless the user asks otherwise
-- admission probabilities are directional planning bands, not predictions
-- unrealistic targets should be recalibrated directly
-- facts and inference should be clearly separated
+```text
+Use Gradpilot to compare these options for my profile:
+- Option A:
+- Option B:
+- Option C:
 
-If you adapt this skill for a specific market or institution type, keep the same decision discipline and only localize the program logic, examples, and terminology.
+My background:
+- School / major:
+- GPA:
+- Experience:
+- Career goal:
+
+Judge by:
+1. fit
+2. admission difficulty
+3. ROI
+4. post-study path
+5. main tradeoff
+```
+
+## 自定义说明
+
+Gradpilot 默认是偏克制、偏保守的：
+
+- 默认使用中文，除非用户明确要求别的语言
+- 录取概率只是方向性规划区间，不是假装精确预测
+- 目标明显不现实的时候要直接校准
+- 必须区分事实与推断
+
+如果你要把它改造成某个市场、某类项目或某个机构场景专用的版本，建议保留这套判断框架，只本地化项目逻辑、示例和术语。
